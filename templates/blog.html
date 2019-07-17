@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if entries|length == 0 %}
+        <p>This blog is as empty as Google+.</p>
+    {% else %}
+        {% for entry in entries %}
+            <h2 class="link"><a href="/showentry?id={{entry.id}}">{{entry.title}}</a></h2>
+            <p>{{entry.body}}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Rock+Salt|Signika" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <a href="/blog" class="link">Main blog page</a>
+        <a class="link" href="/createnew">New entry</a>
+        <section id="title">{{title}}</section>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
